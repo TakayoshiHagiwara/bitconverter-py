@@ -21,7 +21,7 @@ def get_bytes_bool(arg: bool) -> bytes:
     b : bytes
         A bytes object with length 1.
     """
-    return struct.pack('<B', arg)
+    return struct.pack('<?', arg)
 
 def get_bytes_char(arg: str) -> bytes:
     """
