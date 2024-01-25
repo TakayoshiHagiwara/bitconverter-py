@@ -243,7 +243,7 @@ def to_bool(arg: bytes, start_index: int = 0) -> bool:
     value : bool
         True if the byte at start_index in arg is nonzero; otherwise, False.
     """
-    b = struct.unpack('<B', arg[start_index:start_index+1])[0]
+    b = struct.unpack('<?', arg[start_index:start_index+1])[0]
     return False if b == 0 else True
 
 def to_char(arg: bytes, start_index: int = 0) -> str:
